@@ -1,4 +1,4 @@
-package tottus;
+package GUI;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -20,17 +20,18 @@ import net.sourceforge.jbarcodebean.model.Ean13;
 import net.sourceforge.jbarcodebean.model.Ean8;
 import net.sourceforge.jbarcodebean.model.Interleaved25;
 import net.sourceforge.jbarcodebean.model.MSI;
+import tottus.Productos;
 
 /**
  *
  *
  * @author L-Code
  */
-public class TottusJpanel extends javax.swing.JFrame {
+public class BuscarCodigoBarras extends javax.swing.JFrame {
 
     private BufferedImage mImageCB = null;
 
-    public TottusJpanel() {
+    public BuscarCodigoBarras() {
         initComponents();
         Productos.InicioListaProductos();
         this.setLocationRelativeTo(null);
@@ -88,7 +89,7 @@ public class TottusJpanel extends javax.swing.JFrame {
         pnlCodigoBarrasGeneratedLayout.setHorizontalGroup(
             pnlCodigoBarrasGeneratedLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCodigoBarrasGeneratedLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
+                .addContainerGap(22, Short.MAX_VALUE)
                 .addComponent(lblCB, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -279,21 +280,23 @@ public class TottusJpanel extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TottusJpanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarCodigoBarras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TottusJpanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarCodigoBarras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TottusJpanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarCodigoBarras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TottusJpanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(BuscarCodigoBarras.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TottusJpanel().setVisible(true);
+                new BuscarCodigoBarras().setVisible(true);
             }
         });
     }
