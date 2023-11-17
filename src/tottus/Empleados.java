@@ -21,6 +21,10 @@ public class Empleados {
 
         listaEmpleados.add(this);
     }
+    public Empleados(String nombre) {
+        this.nombre = nombre;
+        
+    }
 
     public static void InicioListaEmpleados() {
         Empleados jefe1 = new Empleados("Alejandro", "Mendoza", "123456", "POOI-2023", "Jefe");
@@ -33,12 +37,16 @@ public class Empleados {
     public String getNombre() {
         return nombre;
     }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public String getApellido() {
         return apellido;
     }
 
     public String getCodigo() {
+        
         return codigo;
     }
 
@@ -62,10 +70,12 @@ public class Empleados {
         }
         return null;
     }
+   
 
     public static Empleados Login(String codigo, String contraseña) {
         for (Empleados empleado : listaEmpleados) {
             if (empleado.getCodigo().equals(codigo) && empleado.getContraseña().equals(contraseña)) {
+                
                 return empleado;
             }
         }
