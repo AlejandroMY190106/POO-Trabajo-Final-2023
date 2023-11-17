@@ -192,11 +192,13 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
                         OF.SetNombre(nombre);
                         OF.toFront();
                         OF.show();
+                        this.dispose();
                     }
                     if (empleadoEncontrado.getPuesto() == "Cajero") {
                         OC.SetNombre(nombre);
                         OC.toFront();
                         OC.show();
+                        this.dispose();
                     }
                 } else {
                      BTNIniciar.setForeground(new java.awt.Color(255, 0, 0));

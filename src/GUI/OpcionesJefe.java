@@ -11,7 +11,7 @@ import tottus.Empleados;
  * @author Mendoza
  */
 public class OpcionesJefe extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form Prueba
      */
@@ -214,7 +214,9 @@ public class OpcionesJefe extends javax.swing.JFrame {
     }//GEN-LAST:event_BTNCobrarActionPerformed
 
     private void BTNSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNSalirActionPerformed
-        System.exit(0);
+        PantallaPrincipalLogin PPL = new PantallaPrincipalLogin();
+        PPL.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_BTNSalirActionPerformed
 
     private void BTNCobrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCobrar1ActionPerformed
