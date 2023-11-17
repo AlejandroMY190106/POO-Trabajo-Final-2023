@@ -1,7 +1,7 @@
 package tottus;
 
 import java.util.*;
-
+import GUI.AñadirEmp;
 public class Empleados {
 
     private String nombre;
@@ -73,6 +73,7 @@ public class Empleados {
    
 
     public static Empleados Login(String codigo, String contraseña) {
+        
         for (Empleados empleado : listaEmpleados) {
             if (empleado.getCodigo().equals(codigo) && empleado.getContraseña().equals(contraseña)) {
                 
@@ -82,39 +83,34 @@ public class Empleados {
         return null;
     }
 
-    public static void agregarNuevoEmpleado() {
-        Scanner s = new Scanner(System.in);
-
-        System.out.println("Introducir Nombre:");
-        String nombre = s.nextLine();
-        System.out.println("Introducir Apellido:");
-        String apellido = s.nextLine();
-
-        String codigo;
+    public static void agregarNuevoEmpleado(String nombre, String apellido, String código, String contraseña, String confirmar, String puesto) {
         boolean codigoExiste;
-
+        int c=0;
+        boolean error=true;
         do {
-            System.out.println("Introducir Código:");
-            codigo = s.nextLine();
             codigoExiste = false;
+            
+            
             for (Empleados empleado : listaEmpleados) {
-                if (empleado.getCodigo().equals(codigo)) {
+                if (empleado.getCodigo().equals(código)) {
                     codigoExiste = true;
-                    System.out.println("El código ya existe. Introduce otro código.");
-                    break;
+                    c++;
+                    if(c >= listaEmpleados.size()){
+                    codigoExiste = false;
+                    error = false;
+                    }
                 }
             }
         } while (codigoExiste);
-
-        System.out.println("Introducir Contraseña:");
-        String contraseña = s.nextLine();
-        System.out.println("Introducir Puesto:");
-        String puesto = s.nextLine();
-
-        Empleados nuevoEmpleado = new Empleados(nombre, apellido, codigo, contraseña, puesto);
-        System.out.println("Nuevo empleado agregado con éxito.");
+        if(error){
+        Empleados nuevoEmpleado = new Empleados(nombre, apellido, código, contraseña, puesto);
+        System.out.println("Empleado añadido con exito");
+        }else{
+        System.out.println("El código existe");
+        
+        }
     }
-
+    
     @Override
     public String toString() {
         return "Nombre: " + nombre + "\nApellido: " + apellido + "\nCódigo: " + codigo + "\nPuesto: " + puesto + "\n";

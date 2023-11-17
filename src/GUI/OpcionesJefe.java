@@ -48,9 +48,7 @@ public class OpcionesJefe extends javax.swing.JFrame {
         NOMBRE = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(600, 450));
         setMinimumSize(new java.awt.Dimension(600, 450));
-        setPreferredSize(new java.awt.Dimension(600, 450));
         setResizable(false);
 
         FondoVerdeOC.setBackground(new java.awt.Color(100, 176, 48));
@@ -88,6 +86,11 @@ public class OpcionesJefe extends javax.swing.JFrame {
         BTNLista1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         BTNLista1.setForeground(new java.awt.Color(255, 255, 255));
         BTNLista1.setText("AÑADIR EMPLEADO");
+        BTNLista1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNLista1ActionPerformed(evt);
+            }
+        });
 
         BTNCobrar1.setBackground(new java.awt.Color(68, 132, 0));
         BTNCobrar1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -222,6 +225,12 @@ public class OpcionesJefe extends javax.swing.JFrame {
     private void BTNCobrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCobrar1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BTNCobrar1ActionPerformed
+
+    private void BTNLista1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNLista1ActionPerformed
+        AñadirEmp AE = new AñadirEmp();
+        AE.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BTNLista1ActionPerformed
 
     
     public static void main(String args[]) {

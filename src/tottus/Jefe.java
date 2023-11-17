@@ -37,7 +37,7 @@ public class Jefe implements AccionesEmpleados {
                     listaCompras.Comprar();
                     break;
                 case 5:
-                    Empleados.agregarNuevoEmpleado();
+                    //Empleados.agregarNuevoEmpleado();
                     break;
                 case 6:
                     Productos.agregarNuevoProducto();

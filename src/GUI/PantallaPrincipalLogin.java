@@ -13,6 +13,7 @@ import tottus.Empleados;
 public class PantallaPrincipalLogin extends javax.swing.JFrame {
     OpcionesJefe OF = new OpcionesJefe();
     OpcionesCajero OC = new OpcionesCajero();
+    
     BuscarPRODUCTOCodigo BuscarProducto = new BuscarPRODUCTOCodigo();
      
     public PantallaPrincipalLogin() {
