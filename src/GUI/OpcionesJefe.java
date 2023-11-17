@@ -51,6 +51,7 @@ public class OpcionesJefe extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(600, 450));
         setMinimumSize(new java.awt.Dimension(600, 450));
         setPreferredSize(new java.awt.Dimension(600, 450));
+        setResizable(false);
 
         FondoVerdeOC.setBackground(new java.awt.Color(100, 176, 48));
 

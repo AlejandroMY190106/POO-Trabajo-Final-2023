@@ -13,6 +13,7 @@ import tottus.Empleados;
 public class PantallaPrincipalLogin extends javax.swing.JFrame {
     OpcionesJefe OF = new OpcionesJefe();
     OpcionesCajero OC = new OpcionesCajero();
+    BuscarPRODUCTOCodigo BuscarProducto = new BuscarPRODUCTOCodigo();
      
     public PantallaPrincipalLogin() {
         initComponents();
@@ -45,7 +46,7 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
-        setPreferredSize(new java.awt.Dimension(800, 600));
+        setResizable(false);
 
         desktopPane.setMaximumSize(new java.awt.Dimension(600, 400));
         desktopPane.setMinimumSize(new java.awt.Dimension(600, 400));
@@ -139,6 +140,11 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
 
         saveMenuItem.setMnemonic('s');
         saveMenuItem.setText("Buscar Producto");
+        saveMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveMenuItemActionPerformed(evt);
+            }
+        });
         fileMenu.add(saveMenuItem);
 
         exitMenuItem.setMnemonic('x');
@@ -199,6 +205,12 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
                 }
         
     }//GEN-LAST:event_BTNIniciarActionPerformed
+
+    private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
+        desktopPane.add(BuscarProducto); 
+        BuscarProducto.toFront();
+        BuscarProducto.show();
+    }//GEN-LAST:event_saveMenuItemActionPerformed
 
     /**
      * @param args the command line arguments

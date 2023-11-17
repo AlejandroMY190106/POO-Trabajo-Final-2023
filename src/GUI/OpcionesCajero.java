@@ -47,6 +47,7 @@ public class OpcionesCajero extends javax.swing.JFrame {
         SALUDO1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         FondoVerdeOC.setBackground(new java.awt.Color(100, 176, 48));
         FondoVerdeOC.setPreferredSize(new java.awt.Dimension(600, 450));
