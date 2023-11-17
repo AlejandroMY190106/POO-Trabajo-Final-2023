@@ -10,6 +10,7 @@ import tottus.Empleados;
  *
  * @author Mendoza
  */
+
 public class OpcionesCajero extends javax.swing.JFrame {
 
     /**
@@ -19,7 +20,11 @@ public class OpcionesCajero extends javax.swing.JFrame {
         initComponents();
         
     }
-
+    private String nombre;
+    public void SetNombre(String nombre){
+        this.nombre = nombre;
+        NOMBRE.setText(nombre);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -30,6 +35,7 @@ public class OpcionesCajero extends javax.swing.JFrame {
     private void initComponents() {
 
         FondoVerdeOC = new javax.swing.JPanel();
+        NOMBRE = new javax.swing.JLabel();
         FondoBlancoOC = new javax.swing.JPanel();
         LogoOC = new javax.swing.JLabel();
         BTNSalir = new javax.swing.JButton();
@@ -43,6 +49,10 @@ public class OpcionesCajero extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         FondoVerdeOC.setBackground(new java.awt.Color(100, 176, 48));
+        FondoVerdeOC.setPreferredSize(new java.awt.Dimension(600, 450));
+
+        NOMBRE.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        NOMBRE.setForeground(new java.awt.Color(255, 255, 255));
 
         FondoBlancoOC.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -101,16 +111,16 @@ public class OpcionesCajero extends javax.swing.JFrame {
             }
         });
 
-        SALUDO.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        SALUDO.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         SALUDO.setForeground(new java.awt.Color(255, 255, 255));
-        SALUDO.setText("BIENVENIDO:");
+        SALUDO.setText("Bienvenido:");
 
         BTNLista.setBackground(new java.awt.Color(68, 132, 0));
         BTNLista.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         BTNLista.setForeground(new java.awt.Color(255, 255, 255));
         BTNLista.setText("LISTA COMPRAS");
 
-        SALUDO1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        SALUDO1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         SALUDO1.setForeground(new java.awt.Color(255, 255, 255));
         SALUDO1.setText("Puesto: Cajero");
 
@@ -120,9 +130,9 @@ public class OpcionesCajero extends javax.swing.JFrame {
             FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FondoVerdeOCLayout.createSequentialGroup()
                 .addComponent(FondoBlancoOC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addGap(18, 20, Short.MAX_VALUE)
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoVerdeOCLayout.createSequentialGroup()
+                    .addGroup(FondoVerdeOCLayout.createSequentialGroup()
                         .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(BTNAñadir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -130,12 +140,15 @@ public class OpcionesCajero extends javax.swing.JFrame {
                             .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(BTNCobrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(BTNLista, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(40, 40, 40))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoVerdeOCLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(FondoVerdeOCLayout.createSequentialGroup()
+                        .addComponent(NOMBRE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(FondoVerdeOCLayout.createSequentialGroup()
                         .addComponent(SALUDO)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(SALUDO1)
-                        .addGap(18, 18, 18))))
+                        .addGap(21, 21, 21))))
         );
         FondoVerdeOCLayout.setVerticalGroup(
             FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -145,7 +158,9 @@ public class OpcionesCajero extends javax.swing.JFrame {
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SALUDO1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SALUDO, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(BTNAñadir)
                 .addGap(18, 18, 18)
                 .addComponent(BTNEliminar)
@@ -153,28 +168,22 @@ public class OpcionesCajero extends javax.swing.JFrame {
                 .addComponent(BTNLista)
                 .addGap(32, 32, 32)
                 .addComponent(BTNCobrar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(87, 87, 87))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 645, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(FondoVerdeOC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FondoVerdeOC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(FondoVerdeOC, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(FondoVerdeOC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -227,6 +236,7 @@ public class OpcionesCajero extends javax.swing.JFrame {
     private javax.swing.JPanel FondoBlancoOC;
     private javax.swing.JPanel FondoVerdeOC;
     private javax.swing.JLabel LogoOC;
+    private javax.swing.JLabel NOMBRE;
     private javax.swing.JLabel SALUDO;
     private javax.swing.JLabel SALUDO1;
     // End of variables declaration//GEN-END:variables

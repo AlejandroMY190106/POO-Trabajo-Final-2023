@@ -43,10 +43,9 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         exitMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(600, 400));
-        setMinimumSize(new java.awt.Dimension(600, 400));
-        setPreferredSize(new java.awt.Dimension(600, 400));
-        setResizable(false);
+        setMaximumSize(new java.awt.Dimension(800, 600));
+        setMinimumSize(new java.awt.Dimension(800, 600));
+        setPreferredSize(new java.awt.Dimension(800, 600));
 
         desktopPane.setMaximumSize(new java.awt.Dimension(600, 400));
         desktopPane.setMinimumSize(new java.awt.Dimension(600, 400));
@@ -61,29 +60,33 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(50, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(120, 120, 120))
+                .addGap(66, 66, 66)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
+                .addGap(106, 106, 106))
         );
 
-        jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CÓDIGO DE EMPLEADO:");
 
-        LContra.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        txtCódigo.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+
+        LContra.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         LContra.setForeground(new java.awt.Color(255, 255, 255));
         LContra.setText("CONTRASEÑA:");
 
+        txtContraseña.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+
         BTNIniciar.setBackground(new java.awt.Color(68, 132, 0));
-        BTNIniciar.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        BTNIniciar.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         BTNIniciar.setForeground(new java.awt.Color(255, 255, 255));
         BTNIniciar.setText("INICIAR");
         BTNIniciar.addActionListener(new java.awt.event.ActionListener() {
@@ -98,40 +101,34 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(72, 72, 72)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BTNIniciar)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(LContra)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(txtContraseña, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCódigo, javax.swing.GroupLayout.Alignment.LEADING))))
-                        .addContainerGap(41, Short.MAX_VALUE))))
+                    .addComponent(jLabel2)
+                    .addComponent(LContra)
+                    .addComponent(txtContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
+                    .addComponent(txtCódigo)
+                    .addComponent(BTNIniciar, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(91, 91, 91))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(155, 155, 155)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(txtCódigo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
+                .addComponent(txtCódigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
                 .addComponent(LContra)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addComponent(BTNIniciar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         desktopPane.add(jPanel2);
-        jPanel2.setBounds(0, 0, 600, 380);
+        jPanel2.setBounds(0, 0, 800, 580);
 
         fileMenu.setMnemonic('f');
         fileMenu.setText("Opciones");
@@ -161,11 +158,11 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.PREFERRED_SIZE, 377, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 577, Short.MAX_VALUE)
         );
 
         pack();
@@ -180,17 +177,18 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         
         String código = txtCódigo.getText();
         String contraseña = txtContraseña.getText();
-        
+        String nombre="";
         Empleados empleadoEncontrado = Empleados.Login(código, contraseña);
         if (empleadoEncontrado != null && empleadoEncontrado.getContraseña().equals(contraseña)) {
+            nombre = empleadoEncontrado.getNombre()+" "+empleadoEncontrado.getApellido();
                     
                     if (empleadoEncontrado.getPuesto() == "Jefe") {
-                        
+                        OF.SetNombre(nombre);
                         OF.toFront();
                         OF.show();
                     }
                     if (empleadoEncontrado.getPuesto() == "Cajero") {
-                        
+                        OC.SetNombre(nombre);
                         OC.toFront();
                         OC.show();
                     }
