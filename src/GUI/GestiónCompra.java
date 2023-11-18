@@ -6,6 +6,7 @@ import javax.swing.table.DefaultTableModel;
 import tottus.Productos;
 import javax.swing.table.DefaultTableModel;
 import tottus.ListaCompras;
+import tottus.Clientes;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 
@@ -18,6 +19,8 @@ public class GestiónCompra extends javax.swing.JFrame {
     
     public GestiónCompra() {
         initComponents();
+        Productos.InicioListaProductos();
+        Clientes.InicioListaClientes();
        dtmListaCompras.addColumn("Código");
        dtmListaCompras.addColumn("Nombre");
        dtmListaCompras.addColumn("Cantidad");
@@ -90,6 +93,7 @@ public class GestiónCompra extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         ImporteNrml = new javax.swing.JLabel();
         ImporteAfl = new javax.swing.JLabel();
+        txtVuelto = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,6 +137,11 @@ public class GestiónCompra extends javax.swing.JFrame {
         BTNTarjeta.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         BTNTarjeta.setForeground(new java.awt.Color(255, 255, 255));
         BTNTarjeta.setText("Tarjeta");
+        BTNTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNTarjetaActionPerformed(evt);
+            }
+        });
 
         BGMétodoPago.add(BTNEfectivo);
         BTNEfectivo.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -151,6 +160,11 @@ public class GestiónCompra extends javax.swing.JFrame {
         BTNPagar.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
         BTNPagar.setForeground(new java.awt.Color(255, 255, 255));
         BTNPagar.setText("Pagar");
+        BTNPagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNPagarActionPerformed(evt);
+            }
+        });
 
         BTNSalir.setBackground(new java.awt.Color(255, 0, 0));
         BTNSalir.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -191,6 +205,10 @@ public class GestiónCompra extends javax.swing.JFrame {
         ImporteAfl.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         ImporteAfl.setForeground(new java.awt.Color(255, 255, 255));
         ImporteAfl.setText(".");
+
+        txtVuelto.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        txtVuelto.setForeground(new java.awt.Color(100, 176, 48));
+        txtVuelto.setText("Método de Pago:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -242,7 +260,9 @@ public class GestiónCompra extends javax.swing.JFrame {
                                         .addComponent(BTNEfectivo))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(60, 60, 60)
-                                        .addComponent(jLabel3)))
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtVuelto)
+                                            .addComponent(jLabel3))))
                                 .addGap(0, 16, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -264,7 +284,9 @@ public class GestiónCompra extends javax.swing.JFrame {
                     .addComponent(BTNEliminar))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
+                        .addGap(49, 49, 49)
+                        .addComponent(txtVuelto)
+                        .addGap(54, 54, 54)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -349,12 +371,66 @@ public class GestiónCompra extends javax.swing.JFrame {
         calcularImportes();
         
     }//GEN-LAST:event_BTNEliminarActionPerformed
+
+    private void BTNPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNPagarActionPerformed
+        GraciasPorSuCompra GPSC = new GraciasPorSuCompra();
+        
+        
+        if(BTNTarjeta.isSelected()){
+        String NT = txtTarjetaoEfectivo.getText();
+        Clientes cliente = Clientes.buscarClientePorTarjeta(NT);
+        boolean Afiliado = cliente.isAfiliado();
+        
+        double Cantidad =cliente.getSaldo();
+            if(Afiliado){
+                double precio = Double.parseDouble(ImporteAfl.getText());
+                double puntos = Double.parseDouble(ImportePtsAfl.getText());
+                    if(Cantidad>=precio){
+                        GPSC.SetVuelto(0.0);
+                        GPSC.setVisible(true);
+                       this.dispose();
+                    }else{
+                    JOptionPane.showMessageDialog(this, "Cantidad insuficiente, dar otro medio de pago", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+            }else{
+                double precio = Double.parseDouble(ImporteNrml.getText());
+                
+                if(Cantidad>=precio){
+                        GPSC.SetVuelto(0.0);
+                        GPSC.setVisible(true);
+                        this.dispose();
+                }else{
+                  JOptionPane.showMessageDialog(this, "Cantidad insuficiente, dar otro medio de pago", "Error", JOptionPane.ERROR_MESSAGE);}
+            }
+        }
+        if(BTNEfectivo.isSelected()){
+        double Cantidad = Double.parseDouble(txtTarjetaoEfectivo.getText());
+        double precio = Double.parseDouble(ImporteNrml.getText());
+            if(Cantidad>=precio){
+                
+                double vuelto = Cantidad-precio;
+                GPSC.SetVuelto(vuelto);
+                GPSC.setVisible(true);
+                this.dispose();
+            }else{
+            JOptionPane.showMessageDialog(this, "Cantidad insuficiente, dar otro medio de pago", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }if(BTNEfectivo.isSelected()== false && BTNTarjeta.isSelected()== false){
+            JOptionPane.showMessageDialog(this, "Ingresar un medio de pago", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_BTNPagarActionPerformed
+
+    private void BTNTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNTarjetaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTNTarjetaActionPerformed
     
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         Productos.InicioListaProductos();
+        Clientes.InicioListaClientes();
         
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -409,5 +485,6 @@ public class GestiónCompra extends javax.swing.JFrame {
     private javax.swing.JTable tblListaCompras;
     private javax.swing.JTextField txtCódigo;
     private javax.swing.JTextField txtTarjetaoEfectivo;
+    private javax.swing.JLabel txtVuelto;
     // End of variables declaration//GEN-END:variables
 }
