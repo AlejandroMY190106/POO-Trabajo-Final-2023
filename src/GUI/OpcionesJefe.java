@@ -39,8 +39,8 @@ public class OpcionesJefe extends javax.swing.JFrame {
         BTNEliminar = new javax.swing.JButton();
         BTNLista = new javax.swing.JButton();
         BTNCobrar = new javax.swing.JButton();
-        BTNLista1 = new javax.swing.JButton();
-        BTNCobrar1 = new javax.swing.JButton();
+        BTNAñadirEmp = new javax.swing.JButton();
+        BTNAñadirPro = new javax.swing.JButton();
         SALUDO1 = new javax.swing.JLabel();
         FondoBlancoOC = new javax.swing.JPanel();
         LogoOC = new javax.swing.JLabel();
@@ -82,23 +82,23 @@ public class OpcionesJefe extends javax.swing.JFrame {
             }
         });
 
-        BTNLista1.setBackground(new java.awt.Color(68, 132, 0));
-        BTNLista1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        BTNLista1.setForeground(new java.awt.Color(255, 255, 255));
-        BTNLista1.setText("AÑADIR EMPLEADO");
-        BTNLista1.addActionListener(new java.awt.event.ActionListener() {
+        BTNAñadirEmp.setBackground(new java.awt.Color(68, 132, 0));
+        BTNAñadirEmp.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        BTNAñadirEmp.setForeground(new java.awt.Color(255, 255, 255));
+        BTNAñadirEmp.setText("AÑADIR EMPLEADO");
+        BTNAñadirEmp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNLista1ActionPerformed(evt);
+                BTNAñadirEmpActionPerformed(evt);
             }
         });
 
-        BTNCobrar1.setBackground(new java.awt.Color(68, 132, 0));
-        BTNCobrar1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        BTNCobrar1.setForeground(new java.awt.Color(255, 255, 255));
-        BTNCobrar1.setText("AÑADIR PRODUCTO");
-        BTNCobrar1.addActionListener(new java.awt.event.ActionListener() {
+        BTNAñadirPro.setBackground(new java.awt.Color(68, 132, 0));
+        BTNAñadirPro.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        BTNAñadirPro.setForeground(new java.awt.Color(255, 255, 255));
+        BTNAñadirPro.setText("AÑADIR PRODUCTO");
+        BTNAñadirPro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNCobrar1ActionPerformed(evt);
+                BTNAñadirProActionPerformed(evt);
             }
         });
 
@@ -160,8 +160,8 @@ public class OpcionesJefe extends javax.swing.JFrame {
                             .addComponent(BTNAñadir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BTNEliminar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BTNCobrar, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BTNLista1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BTNCobrar1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BTNAñadirEmp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BTNAñadirPro, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(51, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoVerdeOCLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -192,9 +192,9 @@ public class OpcionesJefe extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(BTNCobrar)
                 .addGap(18, 18, 18)
-                .addComponent(BTNLista1)
+                .addComponent(BTNAñadirEmp)
                 .addGap(18, 18, 18)
-                .addComponent(BTNCobrar1)
+                .addComponent(BTNAñadirPro)
                 .addGap(46, 46, 46))
         );
 
@@ -222,15 +222,15 @@ public class OpcionesJefe extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_BTNSalirActionPerformed
 
-    private void BTNCobrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCobrar1ActionPerformed
+    private void BTNAñadirProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAñadirProActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BTNCobrar1ActionPerformed
+    }//GEN-LAST:event_BTNAñadirProActionPerformed
 
-    private void BTNLista1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNLista1ActionPerformed
+    private void BTNAñadirEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAñadirEmpActionPerformed
         AñadirEmp AE = new AñadirEmp();
         AE.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_BTNLista1ActionPerformed
+    }//GEN-LAST:event_BTNAñadirEmpActionPerformed
 
     
     public static void main(String args[]) {
@@ -270,11 +270,11 @@ public class OpcionesJefe extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNAñadir;
+    private javax.swing.JButton BTNAñadirEmp;
+    private javax.swing.JButton BTNAñadirPro;
     private javax.swing.JButton BTNCobrar;
-    private javax.swing.JButton BTNCobrar1;
     private javax.swing.JButton BTNEliminar;
     private javax.swing.JButton BTNLista;
-    private javax.swing.JButton BTNLista1;
     private javax.swing.JButton BTNSalir;
     private javax.swing.JPanel FondoBlancoOC;
     private javax.swing.JPanel FondoVerdeOC;

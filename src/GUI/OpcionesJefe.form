@@ -57,8 +57,8 @@
                               <Component id="BTNAñadir" alignment="0" max="32767" attributes="0"/>
                               <Component id="BTNEliminar" alignment="0" max="32767" attributes="0"/>
                               <Component id="BTNCobrar" min="-2" pref="210" max="-2" attributes="0"/>
-                              <Component id="BTNLista1" alignment="0" max="32767" attributes="0"/>
-                              <Component id="BTNCobrar1" min="-2" pref="210" max="-2" attributes="0"/>
+                              <Component id="BTNAñadirEmp" alignment="0" max="32767" attributes="0"/>
+                              <Component id="BTNAñadirPro" min="-2" pref="210" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="51" max="32767" attributes="0"/>
                       </Group>
@@ -98,9 +98,9 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="BTNCobrar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="BTNLista1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BTNAñadirEmp" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="BTNCobrar1" min="-2" max="-2" attributes="0"/>
+                  <Component id="BTNAñadirPro" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -177,7 +177,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTNCobrarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BTNLista1">
+        <Component class="javax.swing.JButton" name="BTNA&#xf1;adirEmp">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="84" red="44" type="rgb"/>
@@ -191,10 +191,10 @@
             <Property name="text" type="java.lang.String" value="A&#xd1;ADIR EMPLEADO"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTNLista1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTNA&#xf1;adirEmpActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="BTNCobrar1">
+        <Component class="javax.swing.JButton" name="BTNA&#xf1;adirPro">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="84" red="44" type="rgb"/>
@@ -208,7 +208,7 @@
             <Property name="text" type="java.lang.String" value="A&#xd1;ADIR PRODUCTO"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTNCobrar1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTNA&#xf1;adirProActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="SALUDO1">
