@@ -17,6 +17,7 @@ public class AñadirEmp extends javax.swing.JFrame {
      */
     public AñadirEmp() {
         initComponents();
+        Empleados.InicioListaEmpleados();
     }
 
     /**
