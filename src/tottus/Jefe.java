@@ -40,7 +40,7 @@ public class Jefe implements AccionesEmpleados {
                     //Empleados.agregarNuevoEmpleado();
                     break;
                 case 6:
-                    Productos.agregarNuevoProducto();
+                    //Productos.agregarNuevoProducto();
                     break;
                 case 7:
                     System.out.println(Productos.getListaProductos());

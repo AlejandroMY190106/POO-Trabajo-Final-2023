@@ -223,7 +223,9 @@ public class OpcionesJefe extends javax.swing.JFrame {
     }//GEN-LAST:event_BTNSalirActionPerformed
 
     private void BTNAñadirProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAñadirProActionPerformed
-        // TODO add your handling code here:
+        AñadirProducto AP = new AñadirProducto();
+        AP.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_BTNAñadirProActionPerformed
 
     private void BTNAñadirEmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAñadirEmpActionPerformed

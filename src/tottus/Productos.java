@@ -90,41 +90,36 @@ public class Productos {
         return listaProductos;
     }
 
-    public static void agregarNuevoProducto() {
-        Scanner s = new Scanner(System.in);
-
-        System.out.println("Introducir Nombre:");
-        String nombre = s.nextLine();
-        System.out.println("Introducir Precio:");
-        double precio = s.nextDouble();
-        System.out.println("Introducir Precio para los Afiliados:");
-        double precioafiliado = s.nextDouble();
-        String codigo;
+    public static void agregarNuevoProducto(String nombre, double precio, double precioafiliado, String codigo, String proveedor, String descripcion, int puntosafiliado) {
+        
         boolean codigoExiste;
-
+        int c =0;
+        boolean error=true;
         do {
-            System.out.println("Introducir Código:");
-            s.nextLine();
-            codigo = s.nextLine();
+            
             codigoExiste = false;
             for (Productos producto : listaProductos) {
                 if (producto.getCodigo().equals(codigo)) {
                     codigoExiste = true;
-                    System.out.println("El código ya existe. Introduce otro código.");
-                    break;
+                    c++;
+                    if(c >= listaProductos.size()){
+                    codigoExiste = false;
+                    error = false;
+                    }
                 }
             }
         } while (codigoExiste);
-
-        System.out.println("Introducir Proovedor:");
-        String proveedor = s.nextLine();
-        System.out.println("Introducir descripcion:");
-        String descripcion = s.nextLine();
-        System.out.println("Introducir la cantidad de puntos");
-        int puntosafiliado = s.nextInt();
-
-        Productos nuevoProducto = new Productos(nombre, precio, precioafiliado, codigo, proveedor, descripcion, puntosafiliado);
+        if(error){
+        Productos nuevoProductos = new Productos(nombre, precio, precioafiliado, codigo, proveedor, descripcion, puntosafiliado);
         System.out.println("Nuevo producto agregado con éxito.");
+        }else{
+        System.out.println("El código existe");
+        
+        }
+        
+
+        
+        
     }
 
     @Override
