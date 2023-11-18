@@ -25,13 +25,13 @@ public class Jefe implements AccionesEmpleados {
 
             switch (opcion) {
                 case 1:
-                    AgregarCompra();
+                    //AgregarCompra();
                     break;
                 case 2:
-                    EliminarCompra();
+                    //EliminarCompra();
                     break;
                 case 3:
-                    listaCompras.ListaCompras();
+                    //listaCompras.ListaCompras();
                     break;
                 case 4:
                     listaCompras.Comprar();

@@ -5,12 +5,15 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import GUI.GestiónCompra;
 
 public class ListaCompras {
 
     Scanner s = new Scanner(System.in);
     private Map<Productos, Integer> listaCompras = new HashMap<>();
-
+    public Map<Productos, Integer> getLista(){
+        return listaCompras;
+    }
     public void AgregarCompra(Productos producto) {
         if (listaCompras.containsKey(producto)) {
             listaCompras.put(producto, listaCompras.get(producto) + 1);
@@ -34,13 +37,14 @@ public class ListaCompras {
         }
     }
 
-    public void ListaCompras() {
-        System.out.println("Lista de Compras:");
+    public void MostrarListaCompras() {
         double costoTotal = 0.0;
         double costoTotalAfiliado = 0.0;
         double puntostotal = 0.0;
-
+       
+        
         for (Map.Entry<Productos, Integer> entry : listaCompras.entrySet()) {
+          
             Productos producto = entry.getKey();
             int cantidad = entry.getValue();
             double costoProducto = producto.getPrecio() * cantidad;
@@ -51,7 +55,9 @@ public class ListaCompras {
             puntostotal += puntosproducto;
             System.out.println(producto.getNombre() + " x" + cantidad + " - Precio Unitario: $" + producto.getPrecio() + " - Costo Total: $" + costoProducto);
             System.out.println(producto.getNombre() + " x" + cantidad + " - Precio Unitario (Afiliado): $" + producto.getPrecioAfiliado() + " - Costo Total (Afiliado): $" + costoProductoAfiliado);
+          
         }
+        
         System.out.println("Costo Total de la Compra: $" + costoTotal);
         System.out.println("Costo Total de la Compra (Afiliado): $" + costoTotalAfiliado);
         System.out.println("Puntos Total (Afiliados): " + puntostotal);

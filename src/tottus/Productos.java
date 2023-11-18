@@ -1,7 +1,7 @@
 package tottus;
 
 import java.util.*;
-
+import GUI.GestiónCompra;
 public class Productos {
 
     private String nombre;
@@ -11,6 +11,7 @@ public class Productos {
     private String proveedor;
     private String descripcion;
     private int puntosafiliado;
+    private int cantidad;
 
     private static ArrayList<Productos> listaProductos = new ArrayList<>();
 
@@ -25,7 +26,16 @@ public class Productos {
 
         listaProductos.add(this);
     }
+    
+    
+    public int getCantidad() {
+        return cantidad;
+    }
 
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+    
     public static Productos buscarProductoPorCodigo(String codigo) {
         for (Productos producto : listaProductos) {
             if (producto.getCodigo().equals(codigo)) {
@@ -36,6 +46,7 @@ public class Productos {
     }
 
     public static void InicioListaProductos() {
+        
         Productos producto1 = new Productos("Coca Cola", 11.40, 10.20, "245028", "Coca-Cola Company", "Bebida Coca Cola de 3L", 3);
         Productos producto2 = new Productos("Pepsi", 10.50, 8.90, "123456", "PepsiCo", "Bebida Pepsi de 2L", 2);
         Productos producto3 = new Productos("Doritos", 3.99, 2.50, "789012", "Frito-Lay", "Bolsa de Doritos de queso", 1);

@@ -19,13 +19,13 @@ public class Cajero implements AccionesEmpleados {
             opcion = s.nextInt();
             switch (opcion) {
                 case 1:
-                    AgregarCompra();
+                    //AgregarCompra();
                     break;
                 case 2:
-                    EliminarCompra();
+                    //EliminarCompra();
                     break;
                 case 3:
-                    listaCompras.ListaCompras();
+                    listaCompras.MostrarListaCompras();
                     break;
                 case 4:
                     listaCompras.Comprar();
