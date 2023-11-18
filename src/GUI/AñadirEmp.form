@@ -278,12 +278,16 @@
               <Font name="Roboto" size="18" style="1"/>
             </Property>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="Cajero"/>
-                <StringItem index="1" value="Jefe"/>
+              <StringArray count="3">
+                <StringItem index="0" value="Ninguna"/>
+                <StringItem index="1" value="Cajero"/>
+                <StringItem index="2" value="Jefe"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CBPuestoActionPerformed"/>
+          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>

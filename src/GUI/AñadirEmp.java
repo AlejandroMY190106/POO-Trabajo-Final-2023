@@ -94,7 +94,12 @@ public class AñadirEmp extends javax.swing.JFrame {
         TITULO13.setText("Puesto:");
 
         CBPuesto.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        CBPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cajero", "Jefe" }));
+        CBPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ninguna", "Cajero", "Jefe" }));
+        CBPuesto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CBPuestoActionPerformed(evt);
+            }
+        });
 
         BTNSalir.setBackground(new java.awt.Color(255, 0, 0));
         BTNSalir.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -216,6 +221,7 @@ public class AñadirEmp extends javax.swing.JFrame {
         OpcionesJefe OJ = new OpcionesJefe();
         OJ.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_BTNSalirActionPerformed
 
     private void BTNAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAñadirActionPerformed
@@ -226,12 +232,14 @@ public class AñadirEmp extends javax.swing.JFrame {
         String confirmar = txtConfirmarContraseña.getText();
         String puesto = "";
         int N = CBPuesto.getSelectedIndex();
+        System.out.println(N);
         if (N == 1){
-            puesto = "Cajera";
+            puesto = "Cajero";
         }
         if (N == 2){
             puesto = "Jefe";
         }
+        if(N!=0){
         if (contraseña.equals(confirmar)){
         if(contraseña == "" || confirmar == ""){
             BTNAñadir.setForeground(new java.awt.Color(255, 0, 0));
@@ -241,6 +249,8 @@ public class AñadirEmp extends javax.swing.JFrame {
         }
         }else{
             BTNAñadir.setForeground(new java.awt.Color(255, 0, 0));
+        }}else{
+            BTNAñadir.setForeground(new java.awt.Color(255, 0, 0));
         }
         
         
@@ -248,6 +258,10 @@ public class AñadirEmp extends javax.swing.JFrame {
          
         
     }//GEN-LAST:event_BTNAñadirActionPerformed
+
+    private void CBPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPuestoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CBPuestoActionPerformed
 
     /**
      * @param args the command line arguments
