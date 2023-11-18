@@ -96,6 +96,12 @@ public class GestiónCompra extends javax.swing.JFrame {
         BTNEfectivo.setText("Efectivo");
 
         txtTarjetaoEfectivo.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        txtTarjetaoEfectivo.setText("Ingresar Tarjeta o Efectivo");
+        txtTarjetaoEfectivo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtTarjetaoEfectivoMouseClicked(evt);
+            }
+        });
 
         BTNPagar.setBackground(new java.awt.Color(68, 132, 0));
         BTNPagar.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
@@ -219,6 +225,10 @@ public class GestiónCompra extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_BTNSalirActionPerformed
+
+    private void txtTarjetaoEfectivoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTarjetaoEfectivoMouseClicked
+        txtTarjetaoEfectivo.setText("");
+    }//GEN-LAST:event_txtTarjetaoEfectivoMouseClicked
     
     /**
      * @param args the command line arguments

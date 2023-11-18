@@ -246,9 +246,14 @@ public class AñadirEmp extends javax.swing.JFrame {
         }else{
             
             Empleados.agregarNuevoEmpleado(nombre,apellido, código,contraseña,confirmar,puesto);
+            txtNombre.setText("");
+            txtApellido.setText("");
+            txtCódigo.setText("");
+            txtContraseña.setText("");
+            txtConfirmarContraseña.setText("");
+            CBPuesto.setSelectedIndex(0);
+
         }
-        }else{
-            BTNAñadir.setForeground(new java.awt.Color(255, 0, 0));
         }}else{
             BTNAñadir.setForeground(new java.awt.Color(255, 0, 0));
         }

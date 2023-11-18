@@ -224,6 +224,14 @@ public class AñadirProducto extends javax.swing.JFrame {
             BTNAñadir.setForeground(new java.awt.Color(255, 0, 0));
         }else{
             Productos.agregarNuevoProducto(nombre,Double.parseDouble(precio), Double.parseDouble(precioafiliado), codigo, proveedor, descripcion, Integer.parseInt(puntosafiliado));
+            txtNombre.setText("");
+            txtPrecio.setText("");
+            txtPrecioAfiliado.setText("");
+            txtPuntosAfiliado.setText("");
+            txtCódigo.setText("");
+            txtProovedor.setText("");
+            txtDescripción.setText("");
+            
         }
         
         

@@ -268,7 +268,11 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Roboto" size="18" style="1"/>
             </Property>
+            <Property name="text" type="java.lang.String" value="Ingresar Tarjeta o Efectivo"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txtTarjetaoEfectivoMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BTNPagar">
           <Properties>

@@ -76,12 +76,24 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         jLabel2.setText("CÓDIGO DE EMPLEADO:");
 
         txtCódigo.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        txtCódigo.setText("Ingresar código");
+        txtCódigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtCódigoMouseClicked(evt);
+            }
+        });
 
         LContra.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         LContra.setForeground(new java.awt.Color(255, 255, 255));
         LContra.setText("CONTRASEÑA:");
 
         txtContraseña.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        txtContraseña.setText("INGRESAR");
+        txtContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtContraseñaMouseClicked(evt);
+            }
+        });
 
         BTNIniciar.setBackground(new java.awt.Color(68, 132, 0));
         BTNIniciar.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
@@ -225,6 +237,14 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
 
         // TODO add your handling code here:
     }//GEN-LAST:event_openMenuItemActionPerformed
+
+    private void txtCódigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtCódigoMouseClicked
+        txtCódigo.setText("");
+    }//GEN-LAST:event_txtCódigoMouseClicked
+
+    private void txtContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtContraseñaMouseClicked
+        txtContraseña.setText("");
+    }//GEN-LAST:event_txtContraseñaMouseClicked
 
     /**
      * @param args the command line arguments
