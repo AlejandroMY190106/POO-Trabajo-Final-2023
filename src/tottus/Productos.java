@@ -124,6 +124,6 @@ public class Productos {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + "\nPrecio: " + precio + "\nPrecio Afiliado: " + precioafiliado + "\nCódigo: " + codigo + "\nProveedor: " + proveedor + "\nDescripción: " + descripcion + "\nPuntos Afiliados" + puntosafiliado;
+        return "Nombre: " + nombre + "\nPrecio: " + precio + "\nPrecio Afiliado: " + precioafiliado + "\nCódigo: " + codigo + "\nProveedor: " + proveedor + "\nDescripción: " + descripcion + "\nPuntos Afiliados: " + puntosafiliado;
     }
 }
