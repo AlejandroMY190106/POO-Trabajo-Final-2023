@@ -39,12 +39,10 @@ public class OpcionesCajero extends javax.swing.JFrame {
         FondoBlancoOC = new javax.swing.JPanel();
         LogoOC = new javax.swing.JLabel();
         BTNSalir = new javax.swing.JButton();
-        BTNEliminar = new javax.swing.JButton();
-        BTNAñadir = new javax.swing.JButton();
-        BTNCobrar = new javax.swing.JButton();
         SALUDO = new javax.swing.JLabel();
-        BTNLista = new javax.swing.JButton();
         SALUDO1 = new javax.swing.JLabel();
+        BTNAñadir = new javax.swing.JButton();
+        SALUDO2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -86,44 +84,33 @@ public class OpcionesCajero extends javax.swing.JFrame {
             FondoBlancoOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FondoBlancoOCLayout.createSequentialGroup()
                 .addGap(52, 52, 52)
-                .addComponent(LogoOC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LogoOC, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
                 .addComponent(BTNSalir)
                 .addGap(64, 64, 64))
         );
 
-        BTNEliminar.setBackground(new java.awt.Color(68, 132, 0));
-        BTNEliminar.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        BTNEliminar.setForeground(new java.awt.Color(255, 255, 255));
-        BTNEliminar.setText("ELIMINAR COMPRA");
-
-        BTNAñadir.setBackground(new java.awt.Color(68, 132, 0));
-        BTNAñadir.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        BTNAñadir.setForeground(new java.awt.Color(255, 255, 255));
-        BTNAñadir.setText("AÑADIR COMPRA");
-
-        BTNCobrar.setBackground(new java.awt.Color(68, 132, 0));
-        BTNCobrar.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        BTNCobrar.setForeground(new java.awt.Color(255, 255, 255));
-        BTNCobrar.setText("COBRAR");
-        BTNCobrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BTNCobrarActionPerformed(evt);
-            }
-        });
-
         SALUDO.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         SALUDO.setForeground(new java.awt.Color(255, 255, 255));
         SALUDO.setText("Bienvenido:");
 
-        BTNLista.setBackground(new java.awt.Color(68, 132, 0));
-        BTNLista.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
-        BTNLista.setForeground(new java.awt.Color(255, 255, 255));
-        BTNLista.setText("LISTA COMPRAS");
-
         SALUDO1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         SALUDO1.setForeground(new java.awt.Color(255, 255, 255));
-        SALUDO1.setText("Puesto: Cajero");
+        SALUDO1.setText("Puesto:");
+
+        BTNAñadir.setBackground(new java.awt.Color(68, 132, 0));
+        BTNAñadir.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        BTNAñadir.setForeground(new java.awt.Color(255, 255, 255));
+        BTNAñadir.setText("GESTIONAR COMPRA");
+        BTNAñadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNAñadirActionPerformed(evt);
+            }
+        });
+
+        SALUDO2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        SALUDO2.setForeground(new java.awt.Color(255, 255, 255));
+        SALUDO2.setText("Cajero");
 
         javax.swing.GroupLayout FondoVerdeOCLayout = new javax.swing.GroupLayout(FondoVerdeOC);
         FondoVerdeOC.setLayout(FondoVerdeOCLayout);
@@ -131,25 +118,25 @@ public class OpcionesCajero extends javax.swing.JFrame {
             FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(FondoVerdeOCLayout.createSequentialGroup()
                 .addComponent(FondoBlancoOC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 20, Short.MAX_VALUE)
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoVerdeOCLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addComponent(BTNAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28))
                     .addGroup(FondoVerdeOCLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(BTNAñadir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BTNEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(BTNCobrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BTNLista, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(FondoVerdeOCLayout.createSequentialGroup()
-                        .addComponent(NOMBRE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(FondoVerdeOCLayout.createSequentialGroup()
-                        .addComponent(SALUDO)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(SALUDO1)
-                        .addGap(21, 21, 21))))
+                            .addGroup(FondoVerdeOCLayout.createSequentialGroup()
+                                .addGap(0, 282, Short.MAX_VALUE)
+                                .addComponent(NOMBRE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(FondoVerdeOCLayout.createSequentialGroup()
+                                .addComponent(SALUDO)
+                                .addGap(31, 31, 31)
+                                .addComponent(SALUDO1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(SALUDO2)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
         FondoVerdeOCLayout.setVerticalGroup(
             FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,18 +145,13 @@ public class OpcionesCajero extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(SALUDO1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(SALUDO, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SALUDO, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SALUDO2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addGap(126, 126, 126)
                 .addComponent(BTNAñadir)
-                .addGap(18, 18, 18)
-                .addComponent(BTNEliminar)
-                .addGap(26, 26, 26)
-                .addComponent(BTNLista)
-                .addGap(32, 32, 32)
-                .addComponent(BTNCobrar)
-                .addGap(87, 87, 87))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -190,15 +172,18 @@ public class OpcionesCajero extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BTNCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNCobrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BTNCobrarActionPerformed
-
     private void BTNSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNSalirActionPerformed
         PantallaPrincipalLogin PPL = new PantallaPrincipalLogin();
         PPL.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BTNSalirActionPerformed
+
+    private void BTNAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNAñadirActionPerformed
+        GestiónCompra GC = new GestiónCompra();
+        GC.SetPuesto(SALUDO2.getText());
+        GC.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BTNAñadirActionPerformed
 
     
     public static void main(String args[]) {
@@ -232,9 +217,6 @@ public class OpcionesCajero extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNAñadir;
-    private javax.swing.JButton BTNCobrar;
-    private javax.swing.JButton BTNEliminar;
-    private javax.swing.JButton BTNLista;
     private javax.swing.JButton BTNSalir;
     private javax.swing.JPanel FondoBlancoOC;
     private javax.swing.JPanel FondoVerdeOC;
@@ -242,5 +224,6 @@ public class OpcionesCajero extends javax.swing.JFrame {
     private javax.swing.JLabel NOMBRE;
     private javax.swing.JLabel SALUDO;
     private javax.swing.JLabel SALUDO1;
+    private javax.swing.JLabel SALUDO2;
     // End of variables declaration//GEN-END:variables
 }

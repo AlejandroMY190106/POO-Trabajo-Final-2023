@@ -11,12 +11,7 @@ import tottus.Empleados;
  * @author Mendoza
  */
 public class PantallaPrincipalLogin extends javax.swing.JFrame {
-    OpcionesJefe OF = new OpcionesJefe();
-    OpcionesCajero OC = new OpcionesCajero();
-    
-    BuscarPRODUCTOCodigo BuscarProducto = new BuscarPRODUCTOCodigo();
-    
-
+ 
      
     public PantallaPrincipalLogin() {
         initComponents();
@@ -194,7 +189,8 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         Empleados empleadoEncontrado = Empleados.Login(código, contraseña);
         if (empleadoEncontrado != null && empleadoEncontrado.getContraseña().equals(contraseña)) {
             nombre = empleadoEncontrado.getNombre()+" "+empleadoEncontrado.getApellido();
-                    
+                    OpcionesJefe OF = new OpcionesJefe();
+                    OpcionesCajero OC = new OpcionesCajero();
                     if (empleadoEncontrado.getPuesto() == "Jefe") {
                         OF.SetNombre(nombre);
                         OF.toFront();
@@ -216,6 +212,7 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_BTNIniciarActionPerformed
 
     private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
+        BuscarPRODUCTOCodigo BuscarProducto = new BuscarPRODUCTOCodigo();
         desktopPane.add(BuscarProducto); 
         BuscarProducto.toFront();
         BuscarProducto.show();
