@@ -15,7 +15,11 @@ public class BuscarEmpleadoCodigo extends javax.swing.JInternalFrame {
      */
     public BuscarEmpleadoCodigo() {
         initComponents();
-    
+        this.setResizable(false);
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
     }
 
     /**
