@@ -77,6 +77,12 @@ public class BuscarPRODUCTOCodigo extends javax.swing.JInternalFrame {
             }
         });
 
+        txtCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCodigoActionPerformed(evt);
+            }
+        });
+
         pnlCodigoBarrasGenerated.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pnlCodigoBarrasGeneratedLayout = new javax.swing.GroupLayout(pnlCodigoBarrasGenerated);
@@ -220,6 +226,10 @@ public class BuscarPRODUCTOCodigo extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Producto no encontrado", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
     private AbstractBarcodeStrategy getCodeType(String codeType) {
         AbstractBarcodeStrategy mCodeType = null;
         switch (codeType) {

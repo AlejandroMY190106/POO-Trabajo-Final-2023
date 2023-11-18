@@ -15,6 +15,8 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
     OpcionesCajero OC = new OpcionesCajero();
     
     BuscarPRODUCTOCodigo BuscarProducto = new BuscarPRODUCTOCodigo();
+    
+
      
     public PantallaPrincipalLogin() {
         initComponents();
@@ -45,7 +47,6 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         exitMenuItem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 600));
         setMinimumSize(new java.awt.Dimension(800, 600));
         setResizable(false);
 
@@ -137,6 +138,11 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
 
         openMenuItem.setMnemonic('o');
         openMenuItem.setText("Buscar Empleado");
+        openMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                openMenuItemActionPerformed(evt);
+            }
+        });
         fileMenu.add(openMenuItem);
 
         saveMenuItem.setMnemonic('s');
@@ -214,6 +220,14 @@ public class PantallaPrincipalLogin extends javax.swing.JFrame {
         BuscarProducto.toFront();
         BuscarProducto.show();
     }//GEN-LAST:event_saveMenuItemActionPerformed
+
+    private void openMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_openMenuItemActionPerformed
+          BuscarEmpleadoCodigo buscarEmpleado = new BuscarEmpleadoCodigo();
+                   desktopPane.add(buscarEmpleado);
+                    buscarEmpleado.setVisible(true);
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_openMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
