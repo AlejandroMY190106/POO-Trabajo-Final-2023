@@ -38,14 +38,14 @@ public class AñadirEmp extends javax.swing.JFrame {
         txtCódigo = new javax.swing.JTextField();
         TITULO9 = new javax.swing.JLabel();
         TITULO10 = new javax.swing.JLabel();
-        txtContraseña = new javax.swing.JTextField();
         TITULO11 = new javax.swing.JLabel();
         TITULO12 = new javax.swing.JLabel();
-        txtConfirmarContraseña = new javax.swing.JTextField();
         TITULO13 = new javax.swing.JLabel();
         CBPuesto = new javax.swing.JComboBox<>();
         BTNSalir = new javax.swing.JButton();
         BTNAñadir = new javax.swing.JButton();
+        txtPContraseña = new javax.swing.JPasswordField();
+        txtPConfirmar = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,8 +78,6 @@ public class AñadirEmp extends javax.swing.JFrame {
         TITULO10.setForeground(new java.awt.Color(255, 255, 255));
         TITULO10.setText("Contraseña:");
 
-        txtContraseña.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-
         TITULO11.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         TITULO11.setForeground(new java.awt.Color(255, 255, 255));
         TITULO11.setText("Confirmar");
@@ -87,8 +85,6 @@ public class AñadirEmp extends javax.swing.JFrame {
         TITULO12.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         TITULO12.setForeground(new java.awt.Color(255, 255, 255));
         TITULO12.setText("Contraseña:");
-
-        txtConfirmarContraseña.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
 
         TITULO13.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         TITULO13.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,6 +117,22 @@ public class AñadirEmp extends javax.swing.JFrame {
             }
         });
 
+        txtPContraseña.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        txtPContraseña.setText("jPasswordField1");
+        txtPContraseña.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtPContraseñaMouseClicked(evt);
+            }
+        });
+
+        txtPConfirmar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        txtPConfirmar.setText("jPasswordField1");
+        txtPConfirmar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtPConfirmarMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout FondoVerdeOCLayout = new javax.swing.GroupLayout(FondoVerdeOC);
         FondoVerdeOC.setLayout(FondoVerdeOCLayout);
         FondoVerdeOCLayout.setHorizontalGroup(
@@ -143,9 +155,9 @@ public class AñadirEmp extends javax.swing.JFrame {
                             .addComponent(txtNombre)
                             .addComponent(txtApellido, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
                             .addComponent(txtCódigo, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
-                            .addComponent(txtContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
-                            .addComponent(txtConfirmarContraseña, javax.swing.GroupLayout.DEFAULT_SIZE, 325, Short.MAX_VALUE)
-                            .addComponent(CBPuesto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(CBPuesto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtPContraseña)
+                            .addComponent(txtPConfirmar, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoVerdeOCLayout.createSequentialGroup()
                         .addGap(0, 167, Short.MAX_VALUE)
@@ -183,16 +195,16 @@ public class AñadirEmp extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TITULO10)
-                    .addComponent(txtContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(txtPContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FondoVerdeOCLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TITULO11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TITULO12))
                     .addGroup(FondoVerdeOCLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(txtConfirmarContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(29, 29, 29)
+                        .addComponent(txtPConfirmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(31, 31, 31)
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BTNSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,8 +241,8 @@ public class AñadirEmp extends javax.swing.JFrame {
         String nombre = txtNombre.getText();
         String apellido = txtApellido.getText();
         String código = txtCódigo.getText();
-        String contraseña = txtContraseña.getText();
-        String confirmar = txtConfirmarContraseña.getText();
+        String contraseña = txtPContraseña.getText();
+        String confirmar = txtPConfirmar.getText();
         String puesto = "";
         int N = CBPuesto.getSelectedIndex();
         System.out.println(N);
@@ -250,8 +262,8 @@ public class AñadirEmp extends javax.swing.JFrame {
             txtNombre.setText("");
             txtApellido.setText("");
             txtCódigo.setText("");
-            txtContraseña.setText("");
-            txtConfirmarContraseña.setText("");
+            txtPContraseña.setText("");
+            txtPConfirmar.setText("");
             CBPuesto.setSelectedIndex(0);
 
         }
@@ -268,6 +280,14 @@ public class AñadirEmp extends javax.swing.JFrame {
     private void CBPuestoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CBPuestoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CBPuestoActionPerformed
+
+    private void txtPContraseñaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPContraseñaMouseClicked
+        txtPContraseña.setText("");
+    }//GEN-LAST:event_txtPContraseñaMouseClicked
+
+    private void txtPConfirmarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtPConfirmarMouseClicked
+        txtPConfirmar.setText("");
+    }//GEN-LAST:event_txtPConfirmarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -319,9 +339,9 @@ public class AñadirEmp extends javax.swing.JFrame {
     private javax.swing.JLabel TITULO8;
     private javax.swing.JLabel TITULO9;
     private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField txtConfirmarContraseña;
-    private javax.swing.JTextField txtContraseña;
     private javax.swing.JTextField txtCódigo;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JPasswordField txtPConfirmar;
+    private javax.swing.JPasswordField txtPContraseña;
     // End of variables declaration//GEN-END:variables
 }

@@ -409,6 +409,8 @@ public class GestiónCompra extends javax.swing.JFrame {
         boolean Afiliado = cliente.isAfiliado();
         
         double Cantidad =cliente.getSaldo();
+        String nombre = cliente.getNombre()+" "+cliente.getApellido();
+        GPSC.setNombre(nombre);
             if(Afiliado){
                 double precio = Double.parseDouble(ImporteAfl.getText());
                 double puntos = Double.parseDouble(ImportePtsAfl.getText());
@@ -430,7 +432,11 @@ public class GestiónCompra extends javax.swing.JFrame {
                   JOptionPane.showMessageDialog(this, "Cantidad insuficiente, dar otro medio de pago", "Error", JOptionPane.ERROR_MESSAGE);}
             }
         }
+        
+        
+        
         if(BTNEfectivo.isSelected()){
+        GPSC.setNombre("");
         double Cantidad = Double.parseDouble(txtTarjetaoEfectivo.getText());
         double precio = Double.parseDouble(ImporteNrml.getText());
             if(Cantidad>=precio){
