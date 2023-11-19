@@ -133,6 +133,7 @@ public class GestiónCompra extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Método de Pago:");
 
+        BTNTarjeta.setBackground(new java.awt.Color(100, 176, 48));
         BGMétodoPago.add(BTNTarjeta);
         BTNTarjeta.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         BTNTarjeta.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,6 +144,7 @@ public class GestiónCompra extends javax.swing.JFrame {
             }
         });
 
+        BTNEfectivo.setBackground(new java.awt.Color(100, 176, 48));
         BGMétodoPago.add(BTNEfectivo);
         BTNEfectivo.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         BTNEfectivo.setForeground(new java.awt.Color(255, 255, 255));

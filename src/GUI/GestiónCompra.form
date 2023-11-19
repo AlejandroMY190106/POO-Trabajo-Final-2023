@@ -246,6 +246,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="BTNTarjeta">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="30" green="b0" red="64" type="rgb"/>
+            </Property>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="BGM&#xe9;todoPago"/>
             </Property>
@@ -263,6 +266,9 @@
         </Component>
         <Component class="javax.swing.JRadioButton" name="BTNEfectivo">
           <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="30" green="b0" red="64" type="rgb"/>
+            </Property>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="BGM&#xe9;todoPago"/>
             </Property>
