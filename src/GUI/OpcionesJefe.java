@@ -39,14 +39,17 @@ public class OpcionesJefe extends javax.swing.JFrame {
         BTNAñadirEmp = new javax.swing.JButton();
         BTNAñadirPro = new javax.swing.JButton();
         SALUDO1 = new javax.swing.JLabel();
+        NOMBRE = new javax.swing.JLabel();
         FondoBlancoOC = new javax.swing.JPanel();
         LogoOC = new javax.swing.JLabel();
         BTNSalir = new javax.swing.JButton();
-        NOMBRE = new javax.swing.JLabel();
         SALUDO2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(600, 450));
         setMinimumSize(new java.awt.Dimension(600, 450));
+        setPreferredSize(new java.awt.Dimension(600, 450));
         setResizable(false);
 
         FondoVerdeOC.setBackground(new java.awt.Color(100, 176, 48));
@@ -89,6 +92,9 @@ public class OpcionesJefe extends javax.swing.JFrame {
         SALUDO1.setForeground(new java.awt.Color(255, 255, 255));
         SALUDO1.setText("Puesto:");
 
+        NOMBRE.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
+        NOMBRE.setForeground(new java.awt.Color(255, 255, 255));
+
         FondoBlancoOC.setBackground(new java.awt.Color(255, 255, 255));
 
         LogoOC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo Tottus.png"))); // NOI18N
@@ -114,7 +120,7 @@ public class OpcionesJefe extends javax.swing.JFrame {
                     .addGroup(FondoBlancoOCLayout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(BTNSalir)))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         FondoBlancoOCLayout.setVerticalGroup(
             FondoBlancoOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,12 +132,11 @@ public class OpcionesJefe extends javax.swing.JFrame {
                 .addGap(61, 61, 61))
         );
 
-        NOMBRE.setFont(new java.awt.Font("Roboto", 1, 16)); // NOI18N
-        NOMBRE.setForeground(new java.awt.Color(255, 255, 255));
-
         SALUDO2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
         SALUDO2.setForeground(new java.awt.Color(255, 255, 255));
         SALUDO2.setText("Jefe");
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/bolsacompras.png"))); // NOI18N
 
         javax.swing.GroupLayout FondoVerdeOCLayout = new javax.swing.GroupLayout(FondoVerdeOC);
         FondoVerdeOC.setLayout(FondoVerdeOCLayout);
@@ -141,24 +146,23 @@ public class OpcionesJefe extends javax.swing.JFrame {
                 .addComponent(FondoBlancoOC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(FondoVerdeOCLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(BTNAñadir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BTNAñadirEmp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BTNAñadirPro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(51, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, FondoVerdeOCLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(NOMBRE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(47, 47, 47)
+                        .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(BTNAñadir, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BTNAñadirEmp, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(BTNAñadirPro, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(FondoVerdeOCLayout.createSequentialGroup()
                                 .addComponent(SALUDO)
-                                .addGap(48, 48, 48)
+                                .addGap(30, 30, 30)
                                 .addComponent(SALUDO1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SALUDO2)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(21, 21, 21))))
+                                .addComponent(SALUDO2))
+                            .addComponent(NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(FondoVerdeOCLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
         FondoVerdeOCLayout.setVerticalGroup(
             FondoVerdeOCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,15 +173,17 @@ public class OpcionesJefe extends javax.swing.JFrame {
                     .addComponent(SALUDO, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SALUDO1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(SALUDO2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(NOMBRE, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addComponent(BTNAñadir)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BTNAñadirEmp)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BTNAñadirPro)
-                .addGap(155, 155, 155))
+                .addGap(70, 70, 70))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -267,5 +273,6 @@ public class OpcionesJefe extends javax.swing.JFrame {
     private javax.swing.JLabel SALUDO;
     private javax.swing.JLabel SALUDO1;
     private javax.swing.JLabel SALUDO2;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
