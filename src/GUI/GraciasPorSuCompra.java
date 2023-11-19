@@ -60,12 +60,12 @@ public class GraciasPorSuCompra extends javax.swing.JFrame {
         txtNombre.setFont(new java.awt.Font("Roboto Black", 1, 24)); // NOI18N
         txtNombre.setForeground(new java.awt.Color(255, 255, 255));
         txtNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtNombre.setText(".");
+        txtNombre.setText("Nombre:");
         txtNombre.setToolTipText("");
 
         Vuelto.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
         Vuelto.setForeground(new java.awt.Color(255, 255, 255));
-        Vuelto.setText(".");
+        Vuelto.setText("Monto");
 
         jLabel1.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +90,7 @@ public class GraciasPorSuCompra extends javax.swing.JFrame {
 
         txtFecha.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
         txtFecha.setForeground(new java.awt.Color(255, 255, 255));
-        txtFecha.setText(".");
+        txtFecha.setText("yyyy-MM-dd HH:mm:ss");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -98,6 +98,9 @@ public class GraciasPorSuCompra extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(LabelFecha))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -112,11 +115,9 @@ public class GraciasPorSuCompra extends javax.swing.JFrame {
                                 .addGap(92, 92, 92)
                                 .addComponent(BTNSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
-                        .addComponent(Vuelto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Vuelto, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(136, 136, 136)
-                        .addComponent(LabelFecha)
-                        .addGap(18, 18, 18)
+                        .addGap(271, 271, 271)
                         .addComponent(txtFecha)))
                 .addContainerGap(56, Short.MAX_VALUE))
         );
